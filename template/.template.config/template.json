@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Andrey Vorobiev",
+    "classifications": [ "Web", "ChromeExtension" ],
+    "identity": "ChromeExtension.Web.Template",
+    "name": "Chrome Extension Solution",
+    "shortName": "chromeextension",
+    "symbols":{
+      "projectName": {
+        "type": "parameter",
+        "defaultValue": "Chrome Extension",
+        "replaces":"[projectName]"
+      },
+      "description": {
+        "type": "parameter",
+        "defaultValue": "Chrome Extension Description",
+        "replaces":"[description]"
+      }
+    }
+  }
