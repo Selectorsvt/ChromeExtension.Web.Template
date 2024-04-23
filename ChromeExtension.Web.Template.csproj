@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<PackageType>Template</PackageType>
-		<PackageVersion>1.0</PackageVersion>
+		<PackageVersion>1.0.1</PackageVersion>
 		<PackageId>ChromeExtension.Web.Template</PackageId>
 		<Title>Chrome Extension Template</Title>
 		<Authors>Andrey Vorobiev</Authors>
@@ -12,7 +12,6 @@
 		<RepositoryUrl>https://github.com/Selectorsvt/ChromeExtension.Web.Template</RepositoryUrl>
 		<PackageOutputPath>.\nupkg</PackageOutputPath>
 		<TargetFramework>netstandard2.0</TargetFramework>
-
 		<IncludeContentInPack>true</IncludeContentInPack>
 		<IncludeBuildOutput>false</IncludeBuildOutput>
 		<ContentTargetFolders>content</ContentTargetFolders>
@@ -20,9 +19,13 @@
 
 	<ItemGroup>
 		<Content Include="template\**\*" Exclude="template\**\bin\**;template\**\obj\**" />
-		<None Include="$(PackageLicenseFile)" Pack="true" PackagePath=""/>
-		<None Include="$(PackageReadmeFile)" Pack="true" PackagePath=""/>
+		<None Include="$(PackageLicenseFile)" Pack="true" PackagePath="" />
+		<None Include="$(PackageReadmeFile)" Pack="true" PackagePath="" />
 		<Compile Remove="**\*" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="template\background.js" />
 	</ItemGroup>
 
 </Project>
